@@ -1,0 +1,693 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect - Social Media</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="topbar">
+
+    <div class="logo">
+        Connect<span>.</span>
+    </div>
+
+    <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search">
+    </div>
+
+    <nav class="top-nav">
+        <button class="nav-btn active" data-section="home">
+            <i class="fa-solid fa-house"></i>
+        </button>
+
+        <button class="nav-btn" data-section="messages">
+            <i class="fa-solid fa-message"></i>
+            <span class="notification-dot"></span>
+        </button>
+
+        <button class="nav-btn" data-section="notifications">
+            <i class="fa-solid fa-bell"></i>
+        </button>
+
+        <button id="themeBtn" class="nav-btn">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <div class="mini-profile">
+            <img src="https://i.pravatar.cc/100?img=12" alt="Profile">
+        </div>
+    </nav>
+
+</header>
+
+
+<!-- ================= MAIN LAYOUT ================= -->
+
+<div class="layout">
+
+    <!-- LEFT SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="profile-card">
+
+            <img class="profile-cover"
+                 src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800"
+                 alt="Cover">
+
+            <img class="profile-picture"
+                 src="https://i.pravatar.cc/150?img=12"
+                 alt="Profile">
+
+            <h3>Senikau</h3>
+            <p>@weks._vt</p>
+
+            <div class="profile-stats">
+
+                <div>
+                    <strong id="postCount">24</strong>
+                    <span>Posts</span>
+                </div>
+
+                <div>
+                    <strong>1.8K</strong>
+                    <span>Followers</span>
+                </div>
+
+                <div>
+                    <strong>320</strong>
+                    <span>Following</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button class="side-link active" data-section="home">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </button>
+
+        <button class="side-link" data-section="profile">
+            <i class="fa-solid fa-user"></i>
+            Profile
+        </button>
+
+        <button class="side-link" data-section="messages">
+            <i class="fa-solid fa-message"></i>
+            Messages
+        </button>
+
+        <button class="side-link" data-section="notifications">
+            <i class="fa-solid fa-bell"></i>
+            Notifications
+        </button>
+
+        <button class="side-link" data-section="friends">
+            <i class="fa-solid fa-users"></i>
+            Friends
+        </button>
+
+        <button class="side-link" id="createPostSide">
+            <i class="fa-solid fa-plus"></i>
+            Create Post
+        </button>
+
+    </aside>
+
+
+    <!-- ================= FEED ================= -->
+
+    <main class="main-content">
+
+        <section id="homeSection">
+
+            <!-- STORIES -->
+
+            <div class="stories">
+
+                <div class="story add-story">
+                    <img src="https://i.pravatar.cc/150?img=12">
+                    <div class="story-plus">+</div>
+                    <span>Your Story</span>
+                </div>
+
+                <div class="story">
+                    <img src="https://i.pravatar.cc/150?img=32">
+                    <span>Daniel</span>
+                </div>
+
+                <div class="story">
+                    <img src="https://i.pravatar.cc/150?img=44">
+                    <span>Sarah</span>
+                </div>
+
+                <div class="story">
+                    <img src="https://i.pravatar.cc/150?img=56">
+                    <span>James</span>
+                </div>
+
+                <div class="story">
+                    <img src="https://i.pravatar.cc/150?img=25">
+                    <span>Maria</span>
+                </div>
+
+            </div>
+
+
+            <!-- CREATE POST -->
+
+            <div class="create-post">
+
+                <img src="https://i.pravatar.cc/100?img=12">
+
+                <input
+                    type="text"
+                    id="postInput"
+                    placeholder="What's happening?">
+
+                <button id="openPostModal">
+                    Post
+                </button>
+
+            </div>
+
+
+            <!-- ================= POST 1 ================= -->
+
+            <article class="post">
+
+                <div class="post-header">
+
+                    <img src="https://i.pravatar.cc/100?img=32">
+
+                    <div>
+                        <h3>Daniel Williams</h3>
+                        <p>@daniel · 2h</p>
+                    </div>
+
+                    <button class="more-btn">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+
+                </div>
+
+                <p class="post-text">
+                    Beautiful day exploring nature! 🌿
+                    Sometimes it's good to step away from the screen
+                    and enjoy the world around us.
+                </p>
+
+                <!-- IMAGE -->
+
+                <img class="post-image"
+                     src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200"
+                     alt="Mountain landscape">
+
+                <div class="post-info">
+                    <span>❤️ 342</span>
+                    <span>58 comments</span>
+                </div>
+
+                <div class="post-actions">
+
+                    <button class="like-btn">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>Like</span>
+                    </button>
+
+                    <button class="comment-btn">
+                        <i class="fa-regular fa-comment"></i>
+                        Comment
+                    </button>
+
+                    <button class="share-btn">
+                        <i class="fa-solid fa-share"></i>
+                        Share
+                    </button>
+
+                </div>
+
+                <div class="comments">
+
+                    <div class="comment">
+                        <img src="https://i.pravatar.cc/50?img=44">
+                        <div>
+                            <strong>Sarah</strong>
+                            <p>That view is amazing! 🔥</p>
+                        </div>
+                    </div>
+
+                    <div class="comment-input">
+                        <img src="https://i.pravatar.cc/50?img=12">
+                        <input placeholder="Write a comment...">
+                        <button>Send</button>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================= POST 2 - VIDEO ================= -->
+
+            <article class="post">
+
+                <div class="post-header">
+
+                    <img src="https://i.pravatar.cc/100?img=44">
+
+                    <div>
+                        <h3>Sarah Brown</h3>
+                        <p>@sarah · 5h</p>
+                    </div>
+
+                    <button class="more-btn">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+
+                </div>
+
+                <p class="post-text">
+                    Here's a short video from my weekend adventure! 🎥
+                </p>
+
+                <!-- VIDEO -->
+
+                <div class="video-container">
+
+                    <video controls poster="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200">
+
+                        <source
+                            src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                            type="video/mp4">
+
+                        Your browser does not support video playback.
+
+                    </video>
+
+                </div>
+
+                <div class="post-info">
+                    <span>❤️ 189</span>
+                    <span>31 comments</span>
+                </div>
+
+                <div class="post-actions">
+
+                    <button class="like-btn">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>Like</span>
+                    </button>
+
+                    <button class="comment-btn">
+                        <i class="fa-regular fa-comment"></i>
+                        Comment
+                    </button>
+
+                    <button class="share-btn">
+                        <i class="fa-solid fa-share"></i>
+                        Share
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================= POST 3 ================= -->
+
+            <article class="post">
+
+                <div class="post-header">
+
+                    <img src="https://i.pravatar.cc/100?img=56">
+
+                    <div>
+                        <h3>James Miller</h3>
+                        <p>@james · 8h</p>
+                    </div>
+
+                </div>
+
+                <p class="post-text">
+                    New memories with good friends. 📸
+                </p>
+
+                <div class="image-grid">
+
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800">
+
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800">
+
+                </div>
+
+                <div class="post-info">
+                    <span>❤️ 521</span>
+                    <span>74 comments</span>
+                </div>
+
+                <div class="post-actions">
+
+                    <button class="like-btn">
+                        <i class="fa-regular fa-heart"></i>
+                        Like
+                    </button>
+
+                    <button class="comment-btn">
+                        <i class="fa-regular fa-comment"></i>
+                        Comment
+                    </button>
+
+                    <button class="share-btn">
+                        <i class="fa-solid fa-share"></i>
+                        Share
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- ================= PROFILE ================= -->
+
+        <section id="profileSection" class="hidden">
+
+            <div class="large-profile">
+
+                <img class="large-cover"
+                     src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200">
+
+                <img class="large-avatar"
+                     src="https://i.pravatar.cc/200?img=12">
+
+                <h1>Alex Senikau</h1>
+                <p>@alexsenikau</p>
+
+                <p>
+                    Student • Music • Photography • Adventure 🌴
+                </p>
+
+                <button class="edit-profile">
+                    Edit Profile
+                </button>
+
+            </div>
+
+        </section>
+
+
+      <!-- ================= MESSAGES ================= -->
+
+<section id="messagesSection" class="hidden">
+
+    <div class="page-card">
+
+        <!-- Conversation List -->
+        <div id="conversationList">
+
+            <h2>Messages</h2>
+
+            <div class="message conversation-item"
+                 data-person="Daniel Williams"
+                 data-image="https://i.pravatar.cc/70?img=32">
+
+                <img src="https://i.pravatar.cc/70?img=32"
+                     alt="Daniel Williams">
+
+                <div>
+                    <strong>Daniel Williams</strong>
+                    <p>Hey! How are you?</p>
+                </div>
+
+                <span>2m</span>
+
+            </div>
+
+
+            <div class="message conversation-item"
+                 data-person="Sarah Brown"
+                 data-image="https://i.pravatar.cc/70?img=44">
+
+                <img src="https://i.pravatar.cc/70?img=44"
+                     alt="Sarah Brown">
+
+                <div>
+                    <strong>Sarah Brown</strong>
+                    <p>Check out this photo!</p>
+                </div>
+
+                <span>15m</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= CHAT WINDOW ================= -->
+
+        <div id="chatWindow" class="chat-window hidden">
+
+            <div class="chat-header">
+
+                <button id="backToMessages" class="back-button">
+                    ←
+                </button>
+
+                <img id="chatUserImage"
+                     src=""
+                     alt="Profile">
+
+                <div>
+                    <strong id="chatUserName">
+                        Person
+                    </strong>
+
+                    <p>Active now</p>
+                </div>
+
+            </div>
+
+
+            <!-- Messages appear here -->
+
+            <div id="chatMessages" class="chat-messages">
+
+            </div>
+
+
+            <!-- Reply box -->
+
+            <div class="reply-box">
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Write a message..."
+                    autocomplete="off">
+
+                <button id="sendMessage">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Send
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- ================= NOTIFICATIONS ================= -->
+
+        <section id="notificationsSection" class="hidden">
+
+            <div class="page-card">
+
+                <h2>Notifications</h2>
+
+                <div class="notification">
+                    ❤️ <strong>Sarah</strong> liked your post.
+                    <small>5 minutes ago</small>
+                </div>
+
+                <div class="notification">
+                    👤 <strong>Daniel</strong> started following you.
+                    <small>20 minutes ago</small>
+                </div>
+
+                <div class="notification">
+                    💬 <strong>James</strong> commented on your post.
+                    <small>1 hour ago</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FRIENDS ================= -->
+
+        <section id="friendsSection" class="hidden">
+
+            <div class="page-card">
+
+                <h2>People You May Know</h2>
+
+                <div class="friend">
+
+                    <img src="https://i.pravatar.cc/100?img=25">
+
+                    <div>
+                        <strong>Maria Smith</strong>
+                        <p>120 mutual friends</p>
+                    </div>
+
+                    <button class="follow-btn">
+                        Follow
+                    </button>
+
+                </div>
+
+                <div class="friend">
+
+                    <img src="https://i.pravatar.cc/100?img=56">
+
+                    <div>
+                        <strong>James Miller</strong>
+                        <p>45 mutual friends</p>
+                    </div>
+
+                    <button class="follow-btn">
+                        Follow
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= RIGHT SIDEBAR ================= -->
+
+    <aside class="right-sidebar">
+
+        <div class="page-card">
+
+            <h3>Trending</h3>
+
+            <div class="trend">
+                <span>#Music</span>
+                <small>12.5K posts</small>
+            </div>
+
+            <div class="trend">
+                <span>#Photography</span>
+                <small>8.2K posts</small>
+            </div>
+
+            <div class="trend">
+                <span>#Travel</span>
+                <small>6.7K posts</small>
+            </div>
+
+        </div>
+
+
+        <div class="page-card">
+
+            <h3>Suggested Friends</h3>
+
+            <div class="suggestion">
+
+                <img src="https://i.pravatar.cc/60?img=25">
+
+                <div>
+                    <strong>Maria</strong>
+                    <small>@maria</small>
+                </div>
+
+                <button class="follow-btn">
+                    +
+                </button>
+
+            </div>
+
+            <div class="suggestion">
+
+                <img src="https://i.pravatar.cc/60?img=56">
+
+                <div>
+                    <strong>James</strong>
+                    <small>@james</small>
+                </div>
+
+                <button class="follow-btn">
+                    +
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+</div>
+
+
+<!-- ================= CREATE POST MODAL ================= -->
+
+<div id="postModal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="close-modal">
+            ×
+        </button>
+
+        <h2>Create Post</h2>
+
+        <textarea id="newPostText"
+                  placeholder="What's on your mind?"></textarea>
+
+        <input
+            type="url"
+            id="newImageURL"
+            placeholder="Image URL (optional)">
+
+        <button id="publishPost" class="publish-btn">
+            Publish
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
